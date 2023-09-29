@@ -1,0 +1,25 @@
+<!-- templates/home.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Video Converter</title>
+</head>
+<body>
+    <h1>Online Video Converter</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Convert</button>
+    </form>
+</body>
+</html>
+
+{% extends 'navbar.html' %}
+{% block title %}
+
+{{ title }}
+{% endblock %}
+
+{% block content %}
+<h1>Главная страница</h1>
